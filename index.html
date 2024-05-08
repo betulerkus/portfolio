@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="tr" class="sm:scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rabia Erkus portfolio | My projects...</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <script src="js/main.js" defer></script>
+</head>
+
+<body class="min-h-screen min-w-full bg-white flex flex-col items-center">
+  <header class="w-full min-h-screen flex flex-col items-center bg-no-repeat bg-left-top bg-cover px-4 mb-20" style="background-image: url('img/background.png');">
+    <!--menu start-->
+    <div class="w-full max-w-5xl top-0 z-10  text-slate-700">
+      <section class="flex items-end justify-end mt-4">
+        <div>
+          <button id="hamburger-button" class="relative h-8 w-8 cursor-pointer text-3xl md:hidden">
+              <div
+              class="absolute top-4 -mt-0.5 h-1 w-6 rounded bg-slate-700 transition-all duration-500 before:absolute before:h-1 before:w-6 before:-translate-x-2 before:-translate-y-2 before:rounded before:bg-slate-700 before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-6 after:-translate-x-2 after:translate-y-2 after:rounded after:bg-slate-700 after:transition-all after:duration-500 after:content-['']">
+            </div> 
+          </button>
+          <nav class="hidden space-x-6 md:block text-xl *:text-slate-100 *:whitespace-nowrap">
+            <a href="https://www.linkedin.com/in/betulerkus/" class="hover:text-slate-600"><i class='bx bxl-linkedin-square' ></i></a>
+            <a href="#" class="hover:text-slate-600"><i class='bx bxl-github' ></i></a>
+            <a href="mailto:betulerkus@icloud.com" class="hover:text-slate-600"><i class='bx bx-envelope' ></i></a>
+          </nav>
+        </div>
+      </section>
+      <section id="mobile-menu" class="top-68 justify-center absolute hidden w-full origin-top animate-open-menu flex-col text-slate-700 bg-white">
+        <!-- <button class="text-8xl self-end px-6">
+                  &times;
+              </button> -->
+        <nav class="flex min-h-screen flex-col items-center py-8" aria-label="mobile">
+          <a href="#hero" class="w-full py-6 text-center hover:opacity-90">Home</a>
+          <a href="#Features" class="w-full py-6 text-center hover:opacity-90">Features</a>
+          <a href="#" class="w-full py-6 text-center hover:opacity-90">About Us</a>
+          <a href="#" class="w-full py-6 text-center hover:opacity-90">News</a>
+          <a href="#contact" class="w-full py-6 text-center hover:opacity-90">Contact Us</a>
+        </nav>
+  
+      </section>
+    </div>
+    <!--menu end-->
+    <!--banner start-->
+    <div id="aboutMe" class="max-w-5xl mb-12 flex items-center justify-center flex-col scroll-mt-40 lg:flex-row pt-32 lg:pt-24  space-x-20" >
+      
+        <article class="lg:w-1/2 *:lg:text-right flex flex-col space-y-14 text-blue-950">
+          <h3 class="text-center text-2xl">Hello! I'm <span class="font-semibold">Betul Erkus</span></h3>
+          <!-- Sliding Text animation -->
+          <div class="font-extrabold text-4xl text-center [text-wrap:balance] bg-clip-text text-transparent bg-gradient-to-r from-black/70 to-purple-500 ">I offer tailored, effective solutions with <span class="text-pink-500 inline-flex flex-col h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] overflow-hidden">
+            <ul class="block animate-text-slide-5 text-left leading-tight [&_li]:block">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>PHYTON</li>
+                <li>REACT</li>
+                <li aria-hidden="true">HTML</li>
+            </ul>
+        </span></div>
+          <p class="text-center italic text-lg">
+            You can take a look at my projects below to get an idea of my coding skills.
+          </p>
+        </article>
+        <img src="img/banner.png" class="w-1/2 hidden lg:block" />
+    </div>
+    <!--banner end-->
+  </header>
+  <main class="w-full flex flex-col justify-center items-center *:px-4">
+    <!--
+    <section id="summary" class="w-full max-w-7xl flex justify-between flex-col md:flex-row md:space-x-12 mb-14 *:my-4 *:items-start *:flex *:md:w-1/3">
+      <div>
+        <div>
+          <h3 class="text-xl font-medium mb-2 text-blue-600"><i class='bx bx-history rounded-full text-center bg-blue-50 p-4 mr-4'></i>Experience</h3>
+          <p class="text-slate-400">I have 7+ years of professional work experience, have undertaken roles in the IT field across various sectors, which has endowed me with versatile skills and a solution-oriented perspective.</p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <h3 class="text-xl font-medium mb-2 text-blue-600"><i class='bx bx-code-alt rounded-full text-center bg-blue-50 p-4 mr-4'></i>Launguage</h3>
+          <p class="text-slate-400">I'm experienced in JavaScript, CSS, and HTML languages, and I've worked on various projects using these languages. Additionally, I'm developing my skills in Python coding. </p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <h3 class="text-xl font-medium mb-2 text-blue-600"><i class='bx bxs-graduation rounded-full text-center bg-blue-50 p-4 mr-4'></i>Education</h3>
+          <p class="text-slate-400">My bachelor's degree was in mathematics, my associate's degree was in computer technologies. Thanks to my numerical skills, I can produce effective solutions.</p>
+        </div>
+      </div>
+    </section>
+    -->
+
+    <section id="projects" class="w-full max-w-5xl flex flex-col mb-14">
+      <div class="flex flex-col items-center justify-center *:my-5">
+        <h2 class='w-5 flex justify-center whitespace-nowrap overflow-visible border-b border-pink-500 text-2xl font-semibold p-4 mb-4'>
+          PROJECTS</h2>
+          <!--Project Filter Start-->
+        <ul class="inline-flex *:inline-flex *:text-xl *:text-slate-800 space-x-10">
+            <li>
+                <input checked type="radio" id="jsfilter" name="category" value="jsfilter" class="hidden peer" required />
+                <label for="jsfilter" class="items-center cursor-pointer peer-checked:text-pink-500  hover:text-pink-300">                           
+                    <div class="block">
+                        <div class="">JS</div>
+                    </div>
+                </label>
+            </li>
+            <li>
+              <input type="radio" id="CSSfilter" name="category" value="CSSfilter" class="hidden peer" required />
+              <label for="CSSfilter" class="items-center cursor-pointer peer-checked:text-pink-500  hover:text-pink-300">                           
+                  <div class="block">
+                      <div class="">CSS</div>
+                  </div>
+              </label>
+          </li>
+          <li>
+            <input type="radio" id="HTMLfilter" name="category" value="HTMLfilter" class="hidden peer" required />
+            <label for="HTMLfilter" class="items-center cursor-pointer peer-checked:text-pink-500  hover:text-pink-300">                           
+                <div class="block">
+                    <div class="">HTML</div>
+                </div>
+            </label>
+        </li>
+        <li>
+          <input type="radio" id="PHYTONfilter" name="category" value="PHYTONfilter" class="hidden peer" required />
+          <label for="PHYTONfilter" class="items-center cursor-pointer peer-checked:text-pink-500  hover:text-pink-300">                           
+              <div class="block">
+                  <div class="">PHYTON</div>
+              </div>
+          </label>
+        </li>
+        </ul>
+        <!--Project Filter End-->
+      </div>
+      
+      <container id="project">
+        <h3 class="text-gray-600 bg-white p-2">
+          Calculator</h3>
+        <div class="max-w-7xl flex flex-col items-center justify-center overflow-auto bg-gray-800 text-gray-500 rounded-xl *:flex *:justify-start p-2 pb-2 *:w-full" >
+          
+          <div class="flex flex-row items-center border-gray-500">
+              <div class="hidden md:block pl-2 pr-5 space-x-2 *:rounded-full *:text-center *:text-xs *:hover:bg-gray-300 bg-gray-800 *:cursor-not-allowed">
+                <i class='bx bx-x '></i>
+                <i class='bx bx-minus' ></i>
+                <i class='bx bx-collapse-alt ' ></i>
+              </div>
+               
+              <ul class="inline-flex *:inline-flex *:text-sm">
+                <li>
+                    <input checked type="radio" id="output" name="hosting" value="output" class="hidden peer/output" required />
+                    <label for="output" class="items-center px-5 py-1 text-gray-500 border border-gray-500 rounded-t-lg cursor-pointer peer-checked/output:text-gray-800 peer-checked/output:bg-white peer-checked/output:border-white hover:text-white">                           
+                        <div class="block">
+                            <div class="">OUTPUT</div>
+                        </div>
+                    </label>
+                    
+                </li>
+                <li>
+                  <input type="radio" id="JScode" name="hosting" value="JScode" class="hidden peer/JScode" required />
+                  <label for="JScode" class="iitems-center px-5 py-1 text-gray-500 border border-gray-500 rounded-t-lg cursor-pointer peer-checked/JScode:text-gray-800 peer-checked/JScode:bg-white peer-checked/JScode:border-white hover:text-white">                           
+                      <div class="block">
+                          <div class="">JS</div>
+                      </div>
+                  </label>
+              </li>
+              <li>
+                <input type="radio" id="HTMLCSS" name="hosting" value="HTMLCSS" class="hidden peer/HTMLCSS" required />
+                <label for="HTMLCSS" class="items-center px-5 py-1 text-gray-500 border border-gray-500 rounded-t-lg cursor-pointer peer-checked/HTMLCSS:text-gray-800 peer-checked/HTMLCSS:bg-white peer-checke/HTMLCSSd:border-white hover:text-white">                           
+                    <div class="block">
+                        <div class="">HTML & Tailwind CSS</div>
+                    </div>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="rounded-b-xl bg-white p-5 min-h-80 ">
+            
+            <div for="output" class="">
+              Proje burada yayınlanacak!
+            </div>
+          </div>
+        </div>
+      </container>
+    </section>
+
+    <section id="skills" class="flex items-center justify-center w-full my-14 bg-gray-300 pt-10 md:pt-20 md:py-20 py-10">
+        <div class="w-full max-w-5xl flex flex-col md:flex-row justify-center items-center md:items-start text-slate-800 ">
+          <div class="hidden md:block w-1/2 md:w-3/5 justify-start items-start">
+            <img class="rounded-xl" src="img/skills.png" name="yatay" alt=""/>
+          </div>
+          
+          <div class="flex flex-col w-full md:pl-8 space-y-6 *:space-y-1">
+            <div>
+              <h2 class='whitespace-nowrap text-2xl'>
+                MY SKILLS</h2>
+                <p class="">You can review this section to learn about the skills I possess.</p>
+            </div>
+            <article id="skill" class="w-full">
+              <div class="flex justify-between">
+                <p class="font-semibold">
+                  HTML</p>
+                  <p class="text-sm">
+                    100%</p>
+              </div>
+              <div class="h-1 rounded bg-gradient-to-r from-pink-500 from-100% to-slate-200 to-100%"></div>
+            </article>
+            <article id="skill" class="w-full">
+              <div class="flex justify-between">
+                <p class="font-semibold">
+                  CSS (Tailwind)</p>
+                  <p class="text-sm">
+                    95%</p>
+              </div>
+              <div class="h-1 rounded bg-gradient-to-r from-pink-500 from-95% to-slate-200 to-95%"></div>
+            </article>
+            <article id="skill" class="w-full">
+              <div class="flex justify-between">
+                <p class="font-semibold">
+                  JS</p>
+                  <p class="text-sm">
+                    50%</p>
+              </div>
+              <div class="h-1 rounded bg-gradient-to-r from-pink-500 from-50% to-slate-200 to-50%"></div>
+            </article>
+            <article id="skill" class="w-full">
+              <div class="flex justify-between">
+                <p class="font-semibold">
+                  PHYTON</p>
+                  <p class="text-sm">
+                    10%</p>
+              </div>
+              <div class="h-1 rounded bg-gradient-to-r from-pink-500 from-10% to-slate-200 to-10%"></div>
+            </article>
+            <article id="skill" class="w-full">
+              <div class="flex justify-between">
+                <p class="font-semibold">
+                  Figma</p>
+                  <p class="text-sm">
+                    80%</p>
+              </div>
+              <div class="h-1 rounded bg-gradient-to-r from-pink-500 from-80% to-slate-200 to-80%"></div>
+            </article>
+            <article id="skill" class="w-full">
+              <div class="flex justify-between">
+                <p class="font-semibold">
+                  PhotoShop</p>
+                  <p class="text-sm">
+                    95%</p>
+              </div>
+              <div class="h-1 rounded bg-gradient-to-r from-pink-500 from-95% to-slate-200 to-95%"></div>
+            </article>
+            <article id="skill" class="w-full">
+              <div class="flex justify-between">
+                <p class="font-semibold">
+                  GitHub</p>
+                  <p class="text-sm">
+                    90%</p>
+              </div>
+              <div class="h-1 rounded bg-gradient-to-r from-pink-500 from-90% to-slate-200 to-90%"></div>
+            </article>
+            <article id="skill" class="w-full">
+              <div class="flex justify-between">
+                <p class="font-semibold">
+                  MS Office</p>
+                  <p class="text-sm">
+                    100%</p>
+              </div>
+              <div class="h-1 rounded bg-gradient-to-r from-pink-500 from-100% to-slate-200 to-100%"></div>
+            </article>
+          </div>
+        </div>
+    </section>
+
+    <section id="experience" class="w-full max-w-6xl flex items-center flex-col my-14">
+      <h2 class='w-5 flex justify-center whitespace-nowrap overflow-visible border-b border-pink-500 text-2xl font-semibold p-4 mb-20'>Work Experience</h2>
+      
+      <div class="space-y-8 relative before:absolute before:inset-2 before:ml-5 before:-translate-x-5 md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-slate-300">
+              <!-- Item #1 -->
+              <div class="relative flex items-start justify-between md:justify-normal md:odd:flex-row-reverse group">
+                <!-- Icon -->
+                <div class="flex items-center justify-center w-5 h-5 rounded-full border border-white bg-violet-300 text-slate-500 md:order-1 md:group-odd:-translate-x-1/2"></div>
+                <!-- Card -->
+                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded border border-slate-200 shadow-md">
+                  <div class="flex items-center justify-between md:flex-col md:items-start space-x-2 md:space-x-0 lg:flex-row lg:items-center lg:justify-between mb-1">
+                    <h3 class="text-xl font-medium mb-2 text-slate-800">
+                      Front End Developer</h3>
+                    <time class=" text-sm text-violet-300">Just now</time>
+                  </div>
+                  <p class="text-slate-500">I write responsive HTML and Tailwild CSS codes of designs created in Figma,PS or other programs. I also create web designs for customers who wish.</p>
+                  <div class="flex justify-end items-end space-x-2 mt-3">
+                    <time class=" text-sm text-violet-300">Freelancer / Brooklyn NY</time>
+                  </div>
+                </div>
+              </div>
+              <!-- Item #2 -->
+              <div class="relative flex items-start justify-between md:justify-normal md:odd:flex-row-reverse group">
+                <!-- Icon -->
+                <div class="flex items-center justify-center w-5 h-5 rounded-full border border-white bg-violet-300 text-slate-500 md:order-1 md:group-odd:-translate-x-1/2">
+                </div>
+                <!-- Card -->
+                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded border border-slate-200 shadow-md">
+                  <div class="flex items-center justify-between md:flex-col md:items-start space-x-2 md:space-x-0 lg:flex-row lg:items-center lg:justify-between mb-1">
+                    <h3 class="text-xl font-medium mb-2 text-slate-800">
+                      Bussiness Analyst</h3>
+                    <time class=" text-sm text-violet-300">April 2021 - June 2022</time>
+                  </div>
+                  <p class="text-slate-500">I was responsible for analyzing market trends, identifying opportunities for process optimization, and providing data-driven insights to support strategic decision-making within the organization.</p>
+                  <div class="flex justify-end items-end space-x-2 mt-3">
+                    <time class=" text-sm text-violet-300">Swiss Gold / Istanbul Turkey</time>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Item #3 -->
+              <div class="relative flex items-start justify-between md:justify-normal md:odd:flex-row-reverse group">
+                <!-- Icon -->
+                <div class="flex items-center justify-center w-5 h-5 rounded-full border border-white bg-violet-300 text-slate-500 md:order-1 md:group-odd:-translate-x-1/2">
+                </div>
+                <!-- Card -->
+                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded border border-slate-200 shadow-md">
+                  <div class="flex items-center justify-between md:flex-col md:items-start space-x-2 md:space-x-0 lg:flex-row lg:items-center lg:justify-between mb-1">
+                    <h3 class="text-xl font-medium mb-2 text-slate-800">
+                      Founder</h3>
+                    <time class=" text-sm text-violet-300">October 2019 - June 2022</time>
+                  </div>
+                  <p class="text-slate-500">I founded an e-commerce venture, where I applied my analytical skills to drive growth, manage operations efficiently, and deliver exceptional customer experiences.</p>
+                  <div class="flex justify-end items-end space-x-2 mt-3">
+                    <time class=" text-sm text-violet-300">Tugcem Boutique / Istanbul Turkey</time>
+                  </div>
+                </div>
+              </div>
+              <!-- Item #4 -->
+              <div class="relative flex items-start justify-between md:justify-normal md:odd:flex-row-reverse group">
+                <!-- Icon -->
+                <div class="flex items-center justify-center w-5 h-5 rounded-full border border-white bg-violet-300 text-slate-500 md:order-1 md:group-odd:-translate-x-1/2">
+                </div>
+                <!-- Card -->
+                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded border border-slate-200 shadow-md">
+                  <div class="flex items-center justify-between md:flex-col md:items-start space-x-2 md:space-x-0 lg:flex-row lg:items-center lg:justify-betweenmb-1">
+                    <h3 class="text-xl font-medium mb-2 text-slate-800">
+                      Front End Developer</h3>
+                    <time class=" text-sm text-violet-300">March 2018 - July 2019</time>
+                  </div>
+                  <p class="text-slate-500">In this position, I worked in front-end development to create user-friendly and engaging web interfaces using technologies such as HTML, CSS, and JavaScript. I ensured the development of websites and applications in compliance with existing design and usability standards. Additionally, I continuously evaluated user feedback and implemented improvements to enhance user experience, thereby increasing customer satisfaction and interactions. Collaborating with my team, I facilitated effective communication and cooperation to produce solutions aligned with business requirements and to complete projects on time and within budget.</p>
+                  <div class="flex justify-end items-end space-x-2 mt-3">
+                    <time class=" text-sm text-violet-300">Natron Danismanlik / Istanbul Turkey</time>
+                  </div>
+                </div>
+              </div>
+              <!-- Item #5 -->
+              <div class="relative flex items-start justify-between md:justify-normal md:odd:flex-row-reverse group">
+                <!-- Icon -->
+                <div class="flex items-center justify-center w-5 h-5 rounded-full border border-white bg-violet-300 text-slate-500 md:order-1 md:group-odd:-translate-x-1/2">
+                </div>
+                <!-- Card -->
+                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded border border-slate-300 shadow-md">
+                  <div class="flex items-center justify-between md:flex-col md:items-start space-x-2 md:space-x-0 lg:flex-row lg:items-center lg:justify-betweenmb-1">
+                    <h3 class="text-xl font-medium mb-2 text-slate-800">
+                      Webmaster</h3>
+                    <time class=" text-sm text-violet-300">November 2017 - January 2018</time>
+                  </div>
+                  <p class="text-slate-500">I was involved in the design and analysis department for the company's new web needs. This entailed analyzing user requirements, determining the design and specifications for new web projects. Additionally, I developed various strategies to optimize user experience during the design process and implemented improvements by assessing existing web assets.</p>
+                  <div class="flex justify-end items-end space-x-2 mt-3 mb-10">
+                    <time class=" text-sm text-violet-300">Istanbul Gold Refinery / Dubai UAE</time>
+                  </div>
+                  <div class="flex items-center justify-between md:flex-col md:items-start space-x-2 md:space-x-0 lg:flex-row lg:items-center lg:justify-betweenmb-1 ">
+                    <h3 class="text-xl font-medium mb-2 text-slate-800">
+                      Webmaster</h3>
+                    <time class=" text-sm text-violet-300">March 2016 - March 2018</time>
+                  </div>
+                  <p class="text-slate-500">In this role, I managed various websites, managing web content, optimizing user experience and implementing SEO strategies. Using my front-end development skills, I designed visually appealing and user-friendly interfaces. Working in collaboration with the team, I managed website updates and ensured smooth functioning.</p>
+                  <div class="flex justify-end items-end space-x-2 mt-3 mb-10">
+                    <time class=" text-sm text-violet-300">Istanbul Gold Refinery / Istanbul Turkey</time>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+
+    <section id="education" class="w-full max-w-4xl flex items-center justify-center flex-col my-14">
+      <h2 class='w-5 flex justify-center whitespace-nowrap overflow-visible border-b border-pink-500 text-2xl font-semibold p-4 mb-20'>Education</h2>
+      <article class="flex flex-col space-y-20">
+        <div class="border-l border-pink-500 pl-4">
+          <figcaption class="flex space-x-3 rtl:space-x-reverse">
+            <img class="w-8 h-8 rounded-full" src="img/aydin-logo.png">
+            <div class="flex items-center divide-x-2 divide-gray-500">
+                <cite class="pe-3 text-sm text-gray-500">Istanbul Aydin University</cite>
+                <cite class="ps-3 text-sm text-gray-900 ">Math & Computer SC.</cite>
+            </div>
+          </figcaption>
+          <blockquote class=" font-thin italic text-slate-600 text-justify  my-6">
+                <p>"Graduates of the Mathematics-Computer Programming department are equipped with comprehensive theoretical and practical knowledge. They adeptly apply mathematics and computer science to solve real-world problems. Focusing on research, lifelong learning, and ethical values, they ensure continuous growth. With a strong foundation in mathematics and computer science, these graduates proficiently utilize contemporary technology."</p>
+          </blockquote>
+          <time class="flex text-sm text-slate-400">(2016 - 2018)</time>
+        </div>
+        
+        <div class="border-r border-pink-500 pr-4">
+          <figcaption class="flex items-center justify-end space-x-3 rtl:space-x-reverse">
+            <img class="w-8 h-8 rounded-full" src="img/halic-logo.png">
+            <div class="flex items-center divide-x-2 divide-gray-500">
+                <cite class="pe-3 text-sm text-gray-500">Halic University</cite>
+                <cite class="ps-3 text-sm text-gray-900 ">Technology of Computer</cite>
+            </div>
+          </figcaption>
+          <blockquote class=" font-thin italic text-slate-600 text-justify  my-6">
+                <p>"In recent years, in parallel with the dizzying developments in the IT sector, the use of computer technology has rapidly increased in both professional and daily life. Computer technology and programming encompass areas related to computer usage, software development (for PCs, networks, and the internet), hardware maintenance, repair, and the setup and management of computer networks. Graduates as computer technicians are trained to specialize in practical applications."</p>
+          </blockquote>
+          <time class="flex items-center justify-end text-sm text-slate-400">(2012 - 2014)</time>
+        </div>
+      </article>
+    </section>
+
+<!--
+    <section id="" class="flex flex-col items-center justify-center p-6 ">
+      <div class="md:max-w-md pt-20">
+          
+          <h2 class="py-8 text-center text-2xl text-slate-800 md:text-3xl ">
+            Frequently Asked Questions
+          </h2>
+      
+          <p class="text-center text-xs text-slate-700 ">
+              We tried answer most common questions, if you have any additional,</br> please get in touch with our friendly team
+          </p>
+      </div>
+
+
+        GROUP HOVER ve + x DÖNÜŞÜMÜ
+      
+      <div class="flex flex-col justify-center py-8 min-w-full *:rounded *:border *:border-solid *:border-slate-200 *:py-4 *:px-4 *:my-2 *:text-slate-700 *:shadow-md ">
+        
+        <div class=" flex flex-col relative group/item hover:bg-gray-50 ">
+          <h3 class="accordion cursor-pointer text-base  ">#Metin Başlığı 1</h3>
+          <p class="panel text-xs pt-4 hidden transition-transform ease-in-out duration-700">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class=" flex flex-col relative group/item hover:bg-gray-50 ">
+          <h3 class="accordion cursor-pointer text-base  ">#Metin Başlığı 2</h3>
+          <p class="panel text-xs pt-4 hidden ease-in-out duration-700">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class=" flex flex-col relative group/item hover:bg-gray-50 ">
+          <h3 class="accordion cursor-pointer text-base  ">#Metin Başlığı 3</h3>
+          <p class="panel text-xs pt-4 hidden transition-transform ease-in-out duration-700">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+      
+      
+    
+      <div class=" flex  items-center justify-center">
+          <blockquote class="max-w-sm items-center flex flex-col justify-center rounded-3xl bg-blue-50 p-4 w-99">
+            <p class=" text-slate-800 text-sm text-center py-4">
+              Still have a questions? </br>
+            <span class="text-slate-700 text-xs pb-12 text-center">
+              We're sorry we couldn't provide you with the information you were looking for. Please contact us and we'll be happy to help. 
+              </span>
+            </p>
+            <p>
+              <button onclick="window.location.href='#'";  class="w-28  rounded bg-blue-600 p-1 text-white text-xs whitespace-nowrap hover:bg-blue-800 active:bg-blue-950"> 
+                <i class='bx bxs-envelope'></i> Contact us
+                </button>
+            </p>
+          </blockquote>
+      </div>
+    </section>
+
+
+
+    <section id="Blog" class=" items-center justify-center p-6 mb-12">
+      <div class=" w-full flex items-center justify-center py-20">
+        <div class="max-w-md flex items-center justify-center flex-col space-y-2">
+          <i class='flex justify-center items-center bx rounded-full bg-blue-50 text-blue-600 p-2 text-xs'>Blog</i>
+          
+          <h2 class=" text-center text-2xl text-slate-800 sm:text-3xl">
+            Our fresh news
+          </h2>
+      
+          <p class=" flex items-center justify-center text-center text-xs text-slate-500 ">
+              Our blog is more than just a collection of articles - it's a hub of ideas, inspration, and thought-provoking discussiond.
+          </p>
+        </div>
+      </div>
+
+      <ul class="flex list-none flex-col items-start gap-x-8 gap-y-16 sm:flex-row pb-12 relative">
+        <li class="flex flex-col items-start sm:w-1/2 md:1/3">
+          <img src="./img/banner-gorsel-11.jpg" alt="Blog pic" class="rounded-xl w-full " />
+          <div class="flex flex-col px-3 py-4">
+            <div class="flex flex-row items-center pb-2">
+              <article class="w-8 h-8 mr-2">
+                <img src="./img/banner-gorsel-11.jpg" alt="profil pic" class="rounded-full w-8 h-8" />
+              </article>
+              <article class="w-1/2">
+                <p class="text-slate-500 text-mini">
+                  Jenny Wilson </br>
+                <span class=" text-slate-400 text-mini ">
+                  May 9, 2023
+                  </span>
+                </p>
+              </article>
+            </div>
+            <h3 class="text-left text-l text-slate-800 pb-2 sm:text-xl">
+              Meet an web designer in his studio in Amsterdam
+            </h3>
+            <p class=" flex items-center justify-center text-xs text-slate-500 pb-2">
+                We'll get to know the designer and their design philosophy, as well as take a look...
+            </p>
+          </div>
+          <div class="px-3 flex flex-row space-x-1">
+            <a href="#" class='flex justify-center items-center rounded-md px-1 bg-blue-50 whitespace-nowrap text-blue-600 text-mini'>UI/UX</a>
+            <a href="#" class='flex justify-center items-center rounded-md px-1 bg-blue-50 whitespace-nowrap text-blue-600 text-mini'>Studio</a>
+            <a href="#" class='flex justify-center items-center rounded-md px-1 bg-blue-50 whitespace-nowrap text-blue-600 text-mini'>Web Design</a>
+            <a href="#" class='flex justify-center items-center rounded-md px-1 bg-blue-50 whitespace-nowrap text-blue-600 text-mini'>+2</a>
+          </div>
+        </li>
+
+
+        <li class="flex flex-col items-start sm:w-1/2 md:1/3">
+          <img src="./img/banner-gorsel-11.jpg" alt="Blog pic" class="rounded-xl w-full " />
+          <div class="flex flex-col px-3 py-4">
+            <div class="flex flex-row items-center pb-2">
+              <article class="w-8 h-8 mr-2">
+                <img src="./img/banner-gorsel-11.jpg" alt="profil pic" class="rounded-full w-8 h-8" />
+              </article>
+              <article class="w-1/2">
+                <p class="text-slate-500 text-mini">
+                  Jenny Wilson </br>
+                <span class=" text-slate-400 text-mini ">
+                  May 9, 2023
+                  </span>
+                </p>
+              </article>
+            </div>
+            <h3 class="text-left text-l text-slate-800 pb-2 sm:text-xl">
+              The Evolution of UI/UX Design: From Skeuomorphism to Flat Design
+            </h3>
+            <p class=" flex items-center justify-center text-xs text-slate-500 pb-2">
+                Discussin the shift from realistic designs to minimalistic, flat designs.
+            </p>
+          </div>
+          <div class="px-3 flex flex-row space-x-1">
+            <a href="#" class='flex justify-center items-center rounded-md px-1 bg-blue-50 whitespace-nowrap text-blue-600 text-mini'>UI/UX</a>
+            <a href="#" class='flex justify-center items-center rounded-md px-1 bg-blue-50 whitespace-nowrap text-blue-600 text-mini'>Studio</a>
+            <a href="#" class='flex justify-center items-center rounded-md px-1 bg-blue-50 whitespace-nowrap text-blue-600 text-mini'>Web Design</a>
+            <a href="#" class='flex justify-center items-center rounded-md px-1 bg-blue-50 whitespace-nowrap text-blue-600 text-mini'>+2</a>
+          </div>
+        </li>
+
+
+        <li class="flex flex-col items-start sm:w-1/2 md:1/3 md:inline-flex">
+          <img src="./img/banner-gorsel-11.jpg" alt="Blog pic" class="rounded-xl w-full " />
+          <div class="flex flex-col px-3 py-4">
+            <div class="flex flex-row items-center pb-2">
+              <article class="w-8 h-8 mr-2">
+                <img src="./img/banner-gorsel-11.jpg" alt="profil pic" class="rounded-full w-8 h-8" />
+              </article>
+              <article class="w-1/2">
+                <p class="text-slate-500 text-mini">
+                  Jenny Wilson </br>
+                <span class=" text-slate-400 text-mini ">
+                  May 9, 2023
+                  </span>
+                </p>
+              </article>
+            </div>
+            <h3 class="text-left text-l text-slate-800 pb-2 sm:text-xl">
+              The Importance of User-Centered Design in IT Projects
+            </h3>
+            <p class=" flex items-center justify-center text-xs text-slate-500 pb-2">
+                Exploring the significance of putting the use first in IT projects
+            </p>
+          </div>
+          <div class="px-3 flex flex-row space-x-1">
+            <a href="#" class='flex justify-center items-center rounded-md px-1 bg-blue-50 whitespace-nowrap text-blue-600 text-mini'>UI/UX</a>
+            <a href="#" class='flex justify-center items-center rounded-md px-1 bg-blue-50 whitespace-nowrap text-blue-600 text-mini'>Studio</a>
+            <a href="#" class='flex justify-center items-center rounded-md px-1 bg-blue-50 whitespace-nowrap text-blue-600 text-mini'>Web Design</a>
+            <a href="#" class='flex justify-center items-center rounded-md px-1 bg-blue-50 whitespace-nowrap text-blue-600 text-mini'>+2</a>
+          </div>
+        </li>
+      </ul>
+      <hr class="mx-auto w-1/2 bg-black" />
+    </section>
+
+
+
+
+
+    <section id="bulten"
+    class="mb-12 flex items-start  p-6">
+        <blockquote class="w-full rounded-3xl bg-blue-50 p-10">
+          <article class="flex flex-col max-w-sm space-y-2">
+            <p class=" text-slate-700 text-2xl">
+              Enter your e-mail address and get started for free
+            </p>
+            <p class="text-slate-500 text-xs">
+              Stay up to date with the most relevant information, our new collections, news and spacial offers! 
+            </p>
+
+            <form action="" class="items-left flex flex-row gap-4 pt-4">
+              <input type="email" id="email" name="email" required placeholder="Your e-mail address" class="rounded-md text-black text-xs px-2" />
+              <button class="rounded-md border border-solid border-slate-600 bg-blue-600 w-20 h-7 text-white text-xs whitespace-nowrap hover:bg-blue-800 active:bg-blue-950">Subscribe
+              </button>
+            </form>
+
+              
+          </article>
+        </blockquote>
+    </section>
+
+
+
+
+    <section id="Blog" class=" items-center justify-center p-6 mb-12">
+      <div class="w-full flex items-center justify-center py-20">
+        <div class="max-w-md flex items-center justify-center flex-col space-y-2">
+          <h2 class=" text-center text-2xl text-slate-800 sm:text-3xl">
+            Our Clients
+          </h2>
+        </div>
+      </div>
+
+      <ul class="grid grid-cols-4 items-center justify-items-center gap-4">
+        <li>
+          <img src="./img/partner-1.png" alt="client pic"/>
+        </li>
+        <li>
+          <img src="./img/partner-2.png" alt="client pic"/>
+        </li>
+        <li>
+          <img src="./img/partner-3.png" alt="client pic"/>
+        </li>
+        <li>
+          <img src="./img/partner-4.png" alt="client pic"/>
+        </li>
+        <li>
+          <img src="./img/partner-5.png" alt="client pic"/>
+        </li>
+        <li>
+          <img src="./img/partner-6.png" alt="client pic"/>
+        </li>
+        <li>
+          <img src="./img/partner-7.png" alt="client pic"/>
+        </li>
+        <li>
+          <img src="./img/partner-8.png" alt="client pic"/>
+        </li>
+      </ul>
+    </section>
+
+  -->
+    
+  
+  <footer class="w-full bg-gray-300 p-4 ">
+    <p>Copyright &copy; 2024 Rabia Betul Erkus.</p>
+  </footer>
+  </main>
+</body>
+
+</html>
