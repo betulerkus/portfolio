@@ -2,11 +2,10 @@
 module.exports = {
   content: ["./*.html", "./js/*.js"],
   theme: {
-    
-    extend: {
-      screens: {
-        
-      },
+      extend: {
+          screens: {
+              
+        },
       keyframes: {
         'open-menu': {
           '0%': { transform: 'scaleY(0)' },
