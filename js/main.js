@@ -237,7 +237,7 @@ function searchTodoFunc() {
 
     if (findTodoList == "" || findTodoList == null) {
       let parentElement = todoList;
-      alertDintFind(`There aren't  TO DO includes \" $keyWord \" parentElement`);
+      alertDintFind(`There aren\'t  TO DO includes \" ${keyWord} \"`, parentElement);
     }
     else {
       setTodoList(findTodoList);
