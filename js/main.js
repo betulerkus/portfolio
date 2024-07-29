@@ -1,41 +1,42 @@
 //Start My Project Tab Change --------------------------
-const projectTabs = document.querySelector("#navTabs");
-const tabs = Array.from(document.querySelectorAll(".navTab"));
-const tabsContents = Array.from(document.querySelectorAll(".navTabContent"));
+const projectTabs = document.querySelector("#projects");
 
 projectTabs.addEventListener("click", activeProjectTabsFunc);
 
 function activeProjectTabsFunc(e) {
-  console.log(projectTabs);
-  console.log(tabs);
-  console.log(tabsContents);
-  console.log(e.target.id);
   //Active - Passive Tabs
-  tabs.forEach(function (tab) {
-    if (e.target.id == tab.id) {
-      tab.style.color = "#1e293b";
-      tab.style.backgroundColor = "white";
+  
+  let tabs=e.target.parentElement.children;
+  for (let i = 0; i < 4; i++) {
+    if (tabs[i].textContent==e.target.textContent) {
+      if (tabs[i].parentElement.id=="navTabs") {
+        tabs[i].style.backgroundColor = "white";
+        tabs[i].style.color = "#1e293b";
+      }
     }
-    else {
-      tab.style.color = "";
-      tab.style.backgroundColor = "";
+    else{
+      if (tabs[i].parentElement.id=="navTabs") {
+        tabs[i].style.color = "";
+        tabs[i].style.backgroundColor = "";
+      }
     }
-  })
+  }
   //Active - Passive Windows
-  tabsContents.forEach(function (tabsContent) {
-    if (e.target.id.includes(tabsContent.id)) {
-      tabsContent.style.display = "block";
+  let tabsContents =e.target.parentElement.nextElementSibling.children;
+  for (let i = 0; i < 4; i++) {
+    if (tabsContents[i].id==e.target.textContent) {
+      tabsContents[i].style.display = "block";
     }
-    else {
-      tabsContent.style.display = "none";
+    else{
+        tabsContents[i].style.display = "none";
     }
-  })
+  }
 }
 //End My Project Tap Change --------------------------
 
 
 //Start Copy Code Button --------------------------
-let copyArea = document.querySelector("#copyArea");
+let copyArea = document.querySelector("#navTabContents");
 copyArea.addEventListener("click", copyCodeFunc);
 
 function copyCodeFunc (e) {
@@ -60,7 +61,7 @@ function copyCodeFunc (e) {
 //End Copy Code Button --------------------------
 
 
-
+//TODO LIST PROJECT Start!!!
 const newTodo = document.querySelector("#todoName");
 const addButton = document.querySelector("#todoAddButton");
 const searchTodo = document.querySelector("#todoSearch");
@@ -382,4 +383,107 @@ function unCheckedTodoUI(e) {
   (e.parentElement.parentElement).style.color = "";
 }
 
-// End TODO List Project --------------------------
+//TODO List Project END!!!--------------------------
+
+
+
+
+//IMAGE SEARCH PROJECT START!!!------------------------
+const searchButton = document.querySelector("#searchButton");
+const clearButton2 = document.querySelector("#imgClearButton");
+const inputKeyword = document.querySelector("#inputKeyword");
+const imgWrapper = document.querySelector("#imgWrapper");
+const form = document.querySelector("#form");
+
+
+form.addEventListener("submit", getImagesFunc);
+clearButton2.addEventListener("click", removeResultsFunc)
+
+function getImagesFunc(e){
+    let keyWord=inputKeyword.value.trim();
+    imgWrapper.innerHTML="";
+        fetch(`https://api.unsplash.com/search/photos?query=${keyWord}`,{
+        method: "GET",
+        headers: {
+            Authorization : "Client-ID 0Kxx7Tsrl5L_6fQ6jhdQxm1Uqvtdt09aBkIox6rJ9Jg",
+        }
+    }).then((request)=>request.json())
+    .then((data)=>{
+        Array.from(data.results).forEach((eachValue)=>{
+            const url = eachValue.urls.small;
+            addImageToUI(url);
+        })
+     })
+    .catch((err)=>console.log(err))
+    
+    e.preventDefault();
+}
+
+function checkResultsFunc(){
+    if (imgWrapper.hasChildNodes){
+        console.log("hello!!!")
+        // while (imgWrapper.firstChild) {
+        //     imgWrapper.removeChild(imgWrapper.firstChild);
+        //   }
+    }
+}
+
+function addImageToUI(url){
+    const imgDiv = document.createElement("div");
+    imgDiv.style.boxShadow = "0px 0px 10px black"
+    const img =document.createElement("img");
+    img.setAttribute("src", url);
+    img.style.objectFit="cover";
+    img.style.height = "100%";
+    img.style.width = "100%";
+
+    imgWrapper.appendChild(imgDiv).appendChild(img);
+
+    //IMAGE's HTML CODEs
+        /*<div class="shadow-sm">
+            <img src="https://r.resimlink.com/afpmR61DG9AK.png" class=" " style="object-fit: cover" width="100%" height="100%" alt="">
+        </div>*/
+}
+
+function removeResultsFunc(){
+    inputKeyword.value="";
+    inputKeyword.focus();
+    while (imgWrapper.firstChild)
+    {
+        imgWrapper.removeChild(imgWrapper.firstChild);
+    }}
+//IMAGE SEARCH PROJECT END!!!--------------------------
+
+
+
+// CARD SLIDER PROJECT START!!!--------------------------
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  centeredSlides: false,
+  mousewheel: true,
+  keyboard: {
+    enabled: true,
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      slidesPerGroupSkip: 2,
+    },
+    992: {slidesPerView: 3,
+        slidesPerGroup: 3,
+        slidesPerGroupSkip: 3,},
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+// CARD SLIDER PROJECT END!!!--------------------------

@@ -4,10 +4,13 @@
   "description": "",
   "main": "tailwind.config.js",
   "scripts": {
-    "tailwind": "npx tailwindcss -i ./src/input.css -o ./css/style.css --watch" ,
+    "tailwind": "npx tailwindcss -i ./src/input.css -o ./css/style.css --watch",
     "prettier": "npx prettier --write **/*.html"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "daisyui": "^4.12.10"
+  }
 }
